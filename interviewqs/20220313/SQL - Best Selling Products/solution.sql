@@ -26,7 +26,8 @@ create table if not exists orders (
 -- by region in Q4 of 2017
 with sales_agg as (
     select
-        o.region
+        '2017 Q4' as period
+        , o.region
         , p.product_name
         , p.distributor_id
         , sum(o.no_units) as unit_sold
@@ -39,7 +40,8 @@ with sales_agg as (
 select *
 from (
     select
-        region
+        period
+        , region
         , row_number() over (
             partition by region
             order by unit_sold desc) as rank
