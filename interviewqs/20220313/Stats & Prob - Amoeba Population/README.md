@@ -1,3 +1,10 @@
+<style type="text/css">
+  body {
+    background-color: white;
+    color: black
+  }
+</style>
+
 # Best Selling Products
 
 ## Question
@@ -15,7 +22,7 @@ A population of amoebas starts with 1. After a single period, assume the amoeba 
 
 We want to get the probability that the entire population of amoeba dies out eventually. Look at the probability tree above. There are four chances that an amoeba will divide after a single period.
 
-Let's called ![](https://latex.codecogs.com/svg.latex?X) as event that the entire population of amoeba dies and ![](https://latex.codecogs.com/svg.latex?P(X)=p,where&space;0\leq&space;p\leq&space;1) is the probability of it. If all of these events are independent then any generation have the same chance to divide as the first.
+Let's called ![](https://latex.codecogs.com/svg.latex?X) as event that the entire population of amoeba dies and ![](https://latex.codecogs.com/svg.latex?P(X)=p,\>where\;0\leq&space;p\leq&space;1) is the probability of it. If all of these events are independent then any generation have the same chance to divide as the first.
 
 We have 25% chance of amoeba dies after a single period. This added ![](https://latex.codecogs.com/svg.latex?0.25) on ![](https://latex.codecogs.com/svg.latex?p).
 
