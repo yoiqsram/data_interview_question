@@ -41,7 +41,7 @@ Using the tables above, write a SQL query to find the top 5 selling products (in
 
 Follow explanation below to understand the solution. See `solution.sql` for whole query in posgreSQL syntax.
 
-You could create the dataset by run `create_table.sql` first, then run `solution.sql`.
+You could create the dataset by run `dataset.sql` first, then run `solution.sql`.
 
 
 ### Explanation

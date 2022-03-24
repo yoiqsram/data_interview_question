@@ -1,5 +1,6 @@
 -- postgresql
--- if you have run `create_table.sql`, make sure you're in the same schema
+-- if you use dataset from `dataset.sql`,
+-- make sure you're in the same schema
 
 -- show the top 5 selling products (in terms of total unit sold)
 -- by region in Q4 of 2017
