@@ -8,7 +8,7 @@ Suppose you’re an analyst for an e-commerce store. You’re trying to identify
 
 ---
 
-Table: `all_products`
+Table: `products`
 
 | Column Name | Data Type | Description |
 | :--- | :---: | :--- |
@@ -41,11 +41,14 @@ Using the tables above, write a SQL query to find the top 5 selling products (in
 
 Follow explanation below to understand the solution. See `solution.sql` for whole query in posgreSQL syntax.
 
+You could create the dataset by run `create_table.sql` first, then run `solution.sql`.
+
+
 ### Explanation
 
 The objective is to show top 5 product sold by region in Q4 of 2017. We want to show period, region, rank, product's name, product's distibutor ID, and total unit solds.
 
-Information of sales could be obtained from `orders` table that contains sales date (`date`), product (`product_id`) and unit sold (`no_units`). While product's name and it's distributor ID could be obtained from `all_products` table. We could join those tables on `product_id`, filter it to get sales in Q4 of 2017, and sum it's unit sold by region and product.
+Information of sales could be obtained from `orders` table that contains sales date (`date`), product (`product_id`) and unit sold (`no_units`). While product's name and it's distributor ID could be obtained from `products` table. We could join those tables on `product_id`, filter it to get sales in Q4 of 2017, and sum it's unit sold by region and product.
 
 ```
 select
@@ -56,9 +59,9 @@ select
     , sum(o.no_units) as unit_sold
 from
     orders o
-    inner join all_products p on o.product_id = p.product_id
+    inner join products p on o.product_id = p.product_id
 where date between '2017-10-01' and '2017-12-31'
-group by o.region, p.product_name
+group by o.region, p.product_name, p.distributor_id
 ```
 
 After that we want to rank those summary to get the top selling product by region. Let's put query above in CTE and add a rank column.
