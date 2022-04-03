@@ -34,7 +34,7 @@ Table: `orders`
 
 Follow explanation below to understand the solution. See `solution.sql` for whole query in posgreSQL syntax.
 
-You could create the dataset by run `create_table.sql` first, then run `solution.sql`.
+You could create the dataset by run `dataset.sql` first, then run `solution.sql`.
 
 
 ### Explanation
